@@ -15,7 +15,21 @@ def main(event, context):
                 body = {
                     "widgets": [obj['Key'] for obj in data['Contents']]
                 }
+            return{
+                "statusCode":200,
+                "headers":{},
+                "body":json.dumps(body)
+            }
+        
+        return{
+            "statusCode": 400,
+            "headers": {},
+            "body": "We only accept GET /"
+        }
     except Exception as e:
-        body = {
-            
+        body = e.__srt__() or json.dumps(e, indent=2)
+        return {
+            "statusCode": 400,
+            "headers": {},
+            "body": json.dumps(body)
         }
