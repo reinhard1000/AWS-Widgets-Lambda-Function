@@ -9,4 +9,4 @@ install python 3
 pip install boto3 library to interact with AWS S3
 
 
-In the lib directory, create a new file named widget_service.py with this source code
+In the lib directory, create the widget_service.py
