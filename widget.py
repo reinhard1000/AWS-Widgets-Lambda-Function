@@ -15,3 +15,7 @@ def main(event, context):
                 body = {
                     "widgets": [obj['Key'] for obj in data['Contents']]
                 }
+    except Exception as e:
+        body = {
+            
+        }
